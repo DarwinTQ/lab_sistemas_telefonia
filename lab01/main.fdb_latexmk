@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1757998223.04315 "d:/unsa_2025b/sistemas_telefonia/lab01/main.tex" "main.pdf" "main" 1757998224.328 0
-  "C:/Users/darwi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757993724 82507 a9eef8696c92627b87e9975edea03b2a ""
+["pdflatex"] 1758000227.10216 "d:/unsa_2025b/sistemas_telefonia/lab01/main.tex" "main.pdf" "main" 1758000228.28523 0
+  "C:/Users/darwi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757999699 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/darwi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757897270 13257343 75a2c6a233d0412528d6a193e77c5e9c ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136765053 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -60,6 +60,7 @@
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1749467999 2846 e26604d3d895e65d874c07f30c291f3f ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/cite/cite.sty" 1425353482 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
+  "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg" 1465894292 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg" 1465894292 1224 978390e9c2234eab29404bc21b268d1e ""
   "C:/Users/darwi/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/pdftex.def" 1713599642 19440 9da9dcbb27470349a580fca7372d454b ""
@@ -81,9 +82,9 @@
   "Figure_7.png" 1757991731 42431 4c1d96254d4dd85ed614ddd89e2abaa5 ""
   "Figure_8.png" 1757991790 130233 2cb811af1190fa498eb386464fefe927 ""
   "IEEEtran.cls" 1757993355 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "d:/unsa_2025b/sistemas_telefonia/lab01/main.tex" 1757998221 23406 7f6f7c01b910eb0961f8983c554fb9c8 ""
-  "main.aux" 1757998224 3589 2f5687763c499023c4ffefb957670ceb "pdflatex"
-  "main.tex" 1757998221 23406 7f6f7c01b910eb0961f8983c554fb9c8 ""
+  "d:/unsa_2025b/sistemas_telefonia/lab01/main.tex" 1758000224 23497 ef8817802591d4818aef6f344713f67d ""
+  "main.aux" 1758000228 3589 2f5687763c499023c4ffefb957670ceb "pdflatex"
+  "main.tex" 1758000224 23497 ef8817802591d4818aef6f344713f67d ""
   (generated)
   "main.aux"
   "main.log"

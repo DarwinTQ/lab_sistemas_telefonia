@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{float} 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -264,23 +265,27 @@ Los parámetros iniciales, como una frecuencia de muestreo $f_s=8000$ Hz y una d
 \section{Resultados}
 
 \subsection{Análisis de Tonos DTMF}\label{AA}
+% insertar un parrafo
 La figura 1 muestra la forma de onda de la señal DTMF para el dígito '5' en el dominio del tiempo. Se observa una señal periódica compleja, resultado de la suma de dos sinusoides.
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_1.png}}
     \caption{Forma de onda DTMF para el dígito '5'.}
     \label{fig}
 \end{figure}
 
+%este texto tiene que estar despues de la fig 1 y antes de la fig 2
 
 La figura 2 muestra el espectro de frecuencias de la señal DTMF para el dígito '5'. Se identifican claramente los picos en las frecuencias correspondientes a 770 Hz y 1336 Hz, confirmando la composición dual-tone de la señal.
-\begin{figure}[htbp]
+
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_2.png}}
     \caption{Espectro de frecuencias DTMF para el dígito '5'.}
     \label{fig}
 \end{figure}
 
 La figura 3 muestra la forma de onda de la señal DTMF para el dígito '1' en el dominio del tiempo. Se observa una señal periódica compleja, resultado de la suma de dos sinusoides.
-\begin{figure}[htbp]
+
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_3.png}}
     \caption{Forma de onda DTMF para el dígito '1'.}
     \label{fig}
@@ -288,7 +293,7 @@ La figura 3 muestra la forma de onda de la señal DTMF para el dígito '1' en el
 
 
 La figura 4 muestra el espectro de frecuencias de la señal DTMF para el dígito '1'. Se identifican claramente los picos en las frecuencias correspondientes a 697 Hz y 1209 Hz, confirmando la composición dual-tone de la señal.
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_4.png}}
     \caption{Espectro de frecuencias DTMF para el dígito '1'.}
     \label{fig}
@@ -296,19 +301,20 @@ La figura 4 muestra el espectro de frecuencias de la señal DTMF para el dígito
 
 
 La figura 5 muestra la forma de onda de la señal DTMF para el dígito 'C' en el dominio del tiempo. Se observa una señal periódica compleja, resultado de la suma de dos sinusoides.
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_5.png}}
     \caption{Forma de onda DTMF para el dígito 'C'.}
     \label{fig}
 \end{figure}
 
 
-La figura 6 muestra el espectro de frecuencias de la señal DTMF para el dígito 'C'. Se identifican claramente los picos en las frecuencias correspondientes a 697 Hz y 1633 Hz, confirmando la composición dual-tone de la señal.
-\begin{figure}[htbp]
+La figura 6 muestra el espectro de frecuencias de la señal DTMF para el dígito 'C'. Se identifican claramente los picos en las frecuencias correspondientes a 852 Hz y 1477 Hz, confirmando la composición dual-tone de la señal.
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_6.png}}
     \caption{Espectro de frecuencias DTMF para el dígito 'C'.}
     \label{fig} 
 \end{figure}
+
 
 \subsection{Modulación PCM y Codificación de Voz}
 Creacion del archivo de audio voz\_prueba.wav con una señal de voz sintetica.
@@ -362,14 +368,14 @@ PCM + Companding: MOS = 2.5
 \end{verbatim}
 
 La figura 7 muestra PCM uniforme con 4, 8 y 12 bits respectivamente. Se observa que a medida que aumenta la cantidad de bits, la señal cuantizada se aproxima más a la señal original, reduciendo el error de cuantización.
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_7.png}}
     \caption{PCM uniforme con 4, 8 y 12 bits.}
     \label{fig} 
 \end{figure}
 
 La figura 8 muestra Especro voz original, espectro PCM uniforme 8 bits, espectro error de cuantización y espectro PCM + companding A -law. Se observa que la PCM con companding A-law presenta un espectro más cercano al de la señal original, indicando una mejor preservación de las características de la voz.
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_8.png}}
     \caption{Espectros de voz original, PCM uniforme 8 bits, error de cuantización y PCM + companding A-law.}
     \label{fig} 
@@ -395,6 +401,8 @@ La figura 8 muestra Especro voz original, espectro PCM uniforme 8 bits, espectro
     
     \item El laboratorio permitió comprender de manera práctica cómo los procesos de muestreo y cuantización influyen directamente en la calidad del audio digital. Se comprobó que una reducción en el número de bits de cuantización genera un incremento en el error y en la distorsión de la señal, afectando la fidelidad de la voz y su inteligibilidad.
 \end{itemize}
+
+
 
 % \section*{Acknowledgment}
 
