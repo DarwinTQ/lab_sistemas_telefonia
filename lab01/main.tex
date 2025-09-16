@@ -8,6 +8,15 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{float} 
+\usepackage{hyperref}
+
+% Configuración de hyperref para enlaces en azul
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+} 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -26,6 +35,7 @@
     \\%%%% author affiliations
     \IEEEauthorblockA{\textit{Escuela Profesional de Ingeniería en Telecomunicaciones}}\\% first affiliation
     \IEEEauthorblockA{\textit{Universidad Nacional de San Agustín de Arequipa}}\\% second affiliation
+    \IEEEauthorblockA{\textit{Repositorio: \href{https://github.com/DarwinTQ/lab_sistemas_telefonia/tree/main/lab01}{https://github.com/DarwinTQ/lab\_sistemas\_telefonia/tree/main/lab01}}}\\% repository
     % duplicate the line above as many times as needed to list all affiliations
     %%%% corresponding author contact details
     %\IEEEauthorblockA{email address or ORCID of corresponding author(s)}
@@ -433,13 +443,9 @@ La figura 8 muestra Especro voz original, espectro PCM uniforme 8 bits, espectro
 % citation first, followed by the original foreign-language citation \cite{b6}.
 
 \begin{thebibliography}{00}
-    \bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-    \bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-    \bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-    \bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-    \bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-    \bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-    \bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+    \bibitem{b1} IEEE, ``IEEE Conference Templates,'' [En línea]. Disponible en: https://www.ieee.org/conferences/publishing/templates. [Accedido: 16 sep. 2025].
+    \bibitem{b2} MathWorks, ``MATLAB Graphics Documentation,'' [En línea]. Disponible en: https://la.mathworks.com/help/matlab/graphics.html. [Accedido: 16 sep. 2025].
+    \bibitem{b3} Anthropic, ``Claude AI Assistant,'' [En línea]. Disponible en: https://claude.ai. [Accedido: 16 sep. 2025].
 \end{thebibliography}
 \vspace{12pt}
 % \color{red}
