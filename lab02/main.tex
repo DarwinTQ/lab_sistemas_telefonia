@@ -7,13 +7,23 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{float} 
+\usepackage{hyperref}
+
+% Configuración de hyperref para enlaces en azul
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+} 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Fundamentos de Señales Telefónicas y Codificación de Voz en Matlab *\\
+\title{Fundamentos de Señales Telefónicas y Codificación de Voz en Matlab \\
 % delete or comment-out the following line before submission
-{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and should not be used}
+%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and should not be used}
 \thanks{Identify applicable funding agency here. If none, delete this.}
 }
 
@@ -25,6 +35,7 @@
     \\%%%% author affiliations
     \IEEEauthorblockA{\textit{Escuela Profesional de Ingeniería en Telecomunicaciones}}\\% first affiliation
     \IEEEauthorblockA{\textit{Universidad Nacional de San Agustín de Arequipa}}\\% second affiliation
+    \IEEEauthorblockA{\textit{Repositorio: \href{https://github.com/DarwinTQ/lab_sistemas_telefonia/tree/main/lab02}{https://github.com/DarwinTQ/lab\_sistemas\_telefonia/tree/main/lab02}}}\\% repository
     % duplicate the line above as many times as needed to list all affiliations
     %%%% corresponding author contact details
     %\IEEEauthorblockA{email address or ORCID of corresponding author(s)}
@@ -32,15 +43,15 @@
 
 \maketitle
 
-\begin{abstract}
-    This document is a model and instructions for \LaTeX.
-    This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes,
-    or Math in Paper Title or Abstract.
-\end{abstract}
+% \begin{abstract}
+%     This document is a model and instructions for \LaTeX.
+%     This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes,
+%     or Math in Paper Title or Abstract.
+% \end{abstract}
 
-\begin{IEEEkeywords}
-    component, formatting, style, styling, insert
-\end{IEEEkeywords}
+% \begin{IEEEkeywords}
+%     component, formatting, style, styling, insert
+% \end{IEEEkeywords}
 
 \section{Introducción}
 La transición de la telefonía analógica a la digital se basa en principios de procesamiento de señales que garantizan la eficiencia y calidad de la comunicación. Dos de los pilares de esta tecnología son la señalización DTMF para la marcación y la modulación PCM para la digitalización de la voz.
@@ -49,32 +60,32 @@ El objetivo de este laboratorio es comprender y simular estos fundamentos. Prime
 
 \section{Marco Teórico}
 
-\subsection{Tonos DTMF (Dual-Tone Multi-Frequency)}
-Sistema de señalización por tonos utilizado en telefonía donde cada dígito está representado por dos tonos sinusoidales simultáneos:
+\subsection{Conmutación de Circuitos}
+Sistema donde se establece un camino físico dedicado entre los interlocutores durante toda la llamada:
 \begin{itemize}
-    \item Frecuencias bajas: 697, 770, 852, 941 Hz
-    \item Frecuencias altas: 1209, 1336, 1477, 1633 Hz
+    \item Matriz de conmutación: $N \times N$ (N líneas)
+    \item Probabilidad de bloqueo: $P_b = \frac{A^N/N!}{\sum_{k=0}^{N} A^k/k!}$
 \end{itemize}
 
-\subsection{Modulación PCM (Pulse Code Modulation)}
-Proceso de digitalización de señales analógicas:
+\subsection{Teoría de Tráfico Telefónico}
 \begin{itemize}
-    \item Muestreo: $f_s \geq 2f_{max}$ (Teorema de Nyquist)
-    \item Cuantización: $Q = \frac{2^N - 1}{A}$
-    \item Codificación: Representación binaria
+    \item Erlang (E): Unidad de intensidad de tráfico
+    \item Erlang B: Probabilidad de bloqueo en sistemas con pérdidas
+    \item Erlang C: Probabilidad de espera en sistemas con colas
+    \item Ley de Little: $L = \lambda W$
 \end{itemize}
 
-\subsection{Companding}
-Técnica de compresión-expansión:
+\subsection{Parámetros de Calidad de Servicio (QoS)}
 \begin{itemize}
-    \item Ley A: $y = \frac{1 + \ln(A)}{A}|x|$ para $|x| < \frac{1}{A}$
-    \item Ley $\mu$: $y = \frac{\ln(1 + \mu)}{\ln(1 + \mu|x|)}$
+    \item Grado de Servicio (GoS): Probabilidad de bloqueo aceptable
+    \item Utilización: $\rho = \frac{A}{N}$
+    \item Retardo promedio: $W = \frac{1}{\mu - \lambda}$
 \end{itemize}
 
-\subsection{Métricas de Calidad}
+\subsection{Dimensionamiento de Recursos}
 \begin{itemize}
-    \item SNQ: $SNQ = 10\log_{10}\left(\frac{P_{\text{señal}}}{P_{\text{error}}}\right)$
-    \item MOS: Escala subjetiva 1-5
+    \item Líneas necesarias: $N = f(A, P_b)$
+    \item Tráfico admitido: $A = f(N, P_b)$
 \end{itemize}
 
 \section{Desarrollo}
@@ -264,13 +275,144 @@ Los parámetros iniciales, como una frecuencia de muestreo $f_s=8000$ Hz y una d
 \section{Resultados}
 
 \subsection{Análisis de Tonos DTMF}\label{AA}
+% insertar un parrafo
 La figura 1 muestra la forma de onda de la señal DTMF para el dígito '5' en el dominio del tiempo. Se observa una señal periódica compleja, resultado de la suma de dos sinusoides.
-\begin{figure}[htbp]
-    \centerline{\includegraphics{}}
-    \caption{Example of a figure caption.}
-    \label{fig}
-\end{figure}
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_1.png}}
+%     \caption{Forma de onda DTMF para el dígito '5'.}
+%     \label{fig}
+% \end{figure}
+
+% %este texto tiene que estar despues de la fig 1 y antes de la fig 2
+
+% La figura 2 muestra el espectro de frecuencias de la señal DTMF para el dígito '5'. Se identifican claramente los picos en las frecuencias correspondientes a 770 Hz y 1336 Hz, confirmando la composición dual-tone de la señal.
+
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_2.png}}
+%     \caption{Espectro de frecuencias DTMF para el dígito '5'.}
+%     \label{fig}
+% \end{figure}
+
+% La figura 3 muestra la forma de onda de la señal DTMF para el dígito '1' en el dominio del tiempo. Se observa una señal periódica compleja, resultado de la suma de dos sinusoides.
+
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_3.png}}
+%     \caption{Forma de onda DTMF para el dígito '1'.}
+%     \label{fig}
+% \end{figure}
+
+
+% La figura 4 muestra el espectro de frecuencias de la señal DTMF para el dígito '1'. Se identifican claramente los picos en las frecuencias correspondientes a 697 Hz y 1209 Hz, confirmando la composición dual-tone de la señal.
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_4.png}}
+%     \caption{Espectro de frecuencias DTMF para el dígito '1'.}
+%     \label{fig}
+% \end{figure}
+
+
+% La figura 5 muestra la forma de onda de la señal DTMF para el dígito 'C' en el dominio del tiempo. Se observa una señal periódica compleja, resultado de la suma de dos sinusoides.
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_5.png}}
+%     \caption{Forma de onda DTMF para el dígito 'C'.}
+%     \label{fig}
+% \end{figure}
+
+
+% La figura 6 muestra el espectro de frecuencias de la señal DTMF para el dígito 'C'. Se identifican claramente los picos en las frecuencias correspondientes a 852 Hz y 1477 Hz, confirmando la composición dual-tone de la señal.
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_6.png}}
+%     \caption{Espectro de frecuencias DTMF para el dígito 'C'.}
+%     \label{fig} 
+% \end{figure}
+
+
+\subsection{Modulación PCM y Codificación de Voz}
+Creacion del archivo de audio voz\_prueba.wav con una señal de voz sintetica.
+\begin{verbatim}
+    === GRABADORA DE VOZ ===
+Frecuencia: 8000 Hz
+Duración: 5 segundos
+Archivo: voz_prueba.wav
+
+Preparando grabación...
+Grabando durante 5 segundos...
+HABLE AHORA...
+Grabación completada.
+Archivo guardado: voz_prueba.wav
+Duración: 5.00 segundos
+Muestras: 40000
+Error al guardar el archivo: Unrecognized field name "FileSize".
+
+¿Reproducir grabación? (s/n): s
+Reproduciendo...
+
+=== PROCESO COMPLETADO ===
+El archivo voz_prueba.wav está listo para usar.
+
+\end{verbatim}
+
+MODULACIÓN PCM Y CODIFICACIÓN DE VOZ
+\begin{verbatim}
+    El archivo voz_prueba.wav está listo para usar.
+SNQ PCM Uniforme 8-bit: 39.88 dB
+SNQ PCM + Companding A-law 8-bit: -3.09 dB
+Reproduciendo voz original...
+Reproduciendo voz con PCM uniforme 8-bit...
+Reproduciendo voz con companding A-law...
+
+--- CALIDAD DE VOZ ESTIMADA ---
+PCM Uniforme 8-bit: MOS = 4.5
+PCM + Companding: MOS = 2.5
+>> parte2
+SNQ PCM Uniforme 8-bit: 39.88 dB
+SNQ PCM + Companding A-law 8-bit: -3.09 dB
+Reproduciendo voz original...
+Reproduciendo voz con PCM uniforme 8-bit...
+Reproduciendo voz con companding A-law...
+
+--- CALIDAD DE VOZ ESTIMADA ---
+PCM Uniforme 8-bit: MOS = 4.5
+PCM + Companding: MOS = 2.5
+>> 
+
+\end{verbatim}
+
+La figura 7 muestra PCM uniforme con 4, 8 y 12 bits respectivamente. Se observa que a medida que aumenta la cantidad de bits, la señal cuantizada se aproxima más a la señal original, reduciendo el error de cuantización.
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_7.png}}
+%     \caption{PCM uniforme con 4, 8 y 12 bits.}
+%     \label{fig} 
+% \end{figure}
+
+% La figura 8 muestra Especro voz original, espectro PCM uniforme 8 bits, espectro error de cuantización y espectro PCM + companding A -law. Se observa que la PCM con companding A-law presenta un espectro más cercano al de la señal original, indicando una mejor preservación de las características de la voz.
+% \begin{figure}[H]
+%     \centerline{\includegraphics[width=0.8\columnwidth]{Figure_8.png}}
+%     \caption{Espectros de voz original, PCM uniforme 8 bits, error de cuantización y PCM + companding A-law.}
+%     \label{fig} 
+% \end{figure}
+
+
+
+
+
+
+
+
 \section{Conclusiones}
+
+\begin{itemize}
+    \item Se comprobó que la señalización DTMF funciona mediante la combinación de dos frecuencias específicas, lo que permite identificar de manera única cada dígito telefónico.
+    
+    \item En la modulación PCM, se verificó que el número de bits de cuantización influye directamente en la calidad de la señal digitalizada: a mayor número de bits, menor error y mejor calidad de voz.
+    
+    \item El uso de técnicas de companding (Ley A o Ley $\mu$) mejora la relación señal/ruido de cuantización y permite obtener una mejor calidad percibida sin necesidad de incrementar el número de bits.
+    
+    \item Se comprobó que la elección de la frecuencia de muestreo ($f_s$) es crítica para evitar aliasing. Esto confirma lo establecido por el teorema de Nyquist-Shannon, que asegura una reconstrucción fiel de la señal cuando $f_s \geq 2f_{max}$.
+    
+    \item El laboratorio permitió comprender de manera práctica cómo los procesos de muestreo y cuantización influyen directamente en la calidad del audio digital. Se comprobó que una reducción en el número de bits de cuantización genera un incremento en el error y en la distorsión de la señal, afectando la fidelidad de la voz y su inteligibilidad.
+\end{itemize}
+
+
 
 % \section*{Acknowledgment}
 
@@ -301,16 +443,12 @@ La figura 1 muestra la forma de onda de la señal DTMF para el dígito '5' en el
 % citation first, followed by the original foreign-language citation \cite{b6}.
 
 \begin{thebibliography}{00}
-    \bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-    \bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-    \bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-    \bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-    \bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-    \bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-    \bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+    \bibitem{b1} IEEE, ``IEEE Conference Templates,'' [En línea]. Disponible en: https://www.ieee.org/conferences/publishing/templates. [Accedido: 16 sep. 2025].
+    \bibitem{b2} MathWorks, ``MATLAB Graphics Documentation,'' [En línea]. Disponible en: https://la.mathworks.com/help/matlab/graphics.html. [Accedido: 16 sep. 2025].
+    \bibitem{b3} Anthropic, ``Claude AI Assistant,'' [En línea]. Disponible en: https://claude.ai. [Accedido: 16 sep. 2025].
 \end{thebibliography}
 \vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+% \color{red}
+% IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
 
 \end{document}
