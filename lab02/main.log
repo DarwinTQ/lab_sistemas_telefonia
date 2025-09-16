@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.14)  16 SEP 2025 16:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.14)  16 SEP 2025 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,6 +346,9 @@ File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `AA' multiply defined.
 
+
+LaTeX Warning: Label `AA' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -393,83 +396,61 @@ Package hyperref Info: Link coloring ON on input line 22.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
  (C:\Users\darwi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
  (C:\Users\darwi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-
-Underfull \hbox (badness 5316) in paragraph at lines 127--128
-[]\OT1/ptm/b/n/10 Carga de Se[]nal: \OT1/ptm/m/n/10 Se carg[]o un archivo de au-dio
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 331.
-(C:\Users\darwi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 102.
+ (C:\Users\darwi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-[1{C:/Users/darwi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+<Figure_1.png, id=62, 767.9892pt x 513.117pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 116.
+(pdftex.def)             Requested size: 201.60077pt x 134.69131pt.
 
-
-]
-Overfull \hbox (132.0pt too wide) in paragraph at lines 352--352
-[]\OT1/pcr/m/n/10 Error al guardar el archivo: Unrecognized field name "FileSize".[] 
- []
-
-
-Overfull \hbox (30.0pt too wide) in paragraph at lines 352--352
-[]\OT1/pcr/m/n/10 El archivo voz_prueba.wav est[]a listo para usar.[] 
- []
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 378--378
-[]    \OT1/pcr/m/n/10 El archivo voz_prueba.wav est[]a listo para usar.[] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 378--378
-[]\OT1/pcr/m/n/10 Reproduciendo voz con PCM uniforme 8-bit...[] 
- []
-
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 378--378
-[]\OT1/pcr/m/n/10 Reproduciendo voz con PCM uniforme 8-bit...[] 
- []
-
-
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 446--447
+Underfull \hbox (badness 1939) in paragraph at lines 290--291
 []\OT1/ptm/m/n/8 IEEE, ``IEEE Con-fer-ence Tem-plates,'' [En l[]^^Pnea]. Disponible en:
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 446--447
+Underfull \hbox (badness 2237) in paragraph at lines 290--291
 \OT1/ptm/m/n/8 https://www.ieee.org/conferences/publishing/templates. [Ac-ce-dido: 16
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 []\OT1/ptm/m/n/8 MathWorks, ``MAT-LAB Graph-ics Doc-u-men-ta-tion,'' [En l[]^^Pnea].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 \OT1/ptm/m/n/8 Disponible en: https://la.mathworks.com/help/matlab/graphics.html.
  []
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 448--449
+Underfull \hbox (badness 6625) in paragraph at lines 292--293
 []\OT1/ptm/m/n/8 Anthropic, ``Claude AI As-sis-tant,'' [En l[]^^Pnea]. Disponible en:
  []
 
 
 
-[2] (main.aux)
+[1{C:/Users/darwi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+ <./Figure_1.png (PNG copy)>]
+
+
+
+[2
+
+] (main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
@@ -479,20 +460,20 @@ L3 programming layer <2025-08-13>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 38EEC320452774E9CA04F433A0891B0D;2436.
+(rerunfilecheck)             Checksum: F09649703B712C7C3762E222973144E3;2488.
  ) 
 Here is how much of TeX's memory you used:
- 11358 strings out of 468133
- 176724 string characters out of 5430712
- 617292 words of memory out of 5000000
- 39812 multiletter control sequences out of 15000+600000
- 665455 words of font info for 114 fonts, out of 8000000 for 9000
+ 11339 strings out of 468133
+ 176532 string characters out of 5430712
+ 611302 words of memory out of 5000000
+ 39803 multiletter control sequences out of 15000+600000
+ 658417 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,672b,627s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 173332 bytes).
+ 75i,7n,79p,796b,581s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/darwi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 249443 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
